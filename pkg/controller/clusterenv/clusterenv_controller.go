@@ -128,6 +128,7 @@ func (r *ReconcileClusterEnv) Reconcile(request reconcile.Request) (reconcile.Re
 	}
 
 	if product != instance.Status.Product {
+		reqLogger.Info("Updating product...", "product", product)
 		instance.Status.Product = product
 		r.client.Status().Update(context.TODO(), instance)
 	}
