@@ -15,8 +15,7 @@ spec:
       serviceAccountName: env-operator
       containers:
         - name: env-operator
-          # Replace this with the built image name
-          image: REPLACE_IMAGE
+          image: jmckind/env-operator:latest
           command:
           - env-operator
           imagePullPolicy: Always
@@ -31,3 +30,4 @@ spec:
                   fieldPath: metadata.name
             - name: OPERATOR_NAME
               value: "env-operator"
+          resources: {}

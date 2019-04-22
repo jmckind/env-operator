@@ -1,0 +1,5 @@
+apiVersion: env.mkz.io/v1alpha1
+kind: ClusterEnv
+metadata:
+  name: example-clusterenv
+spec: {}
