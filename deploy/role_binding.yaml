@@ -1,0 +1,11 @@
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: env-operator
+subjects:
+- kind: ServiceAccount
+  name: env-operator
+roleRef:
+  kind: Role
+  name: env-operator
+  apiGroup: rbac.authorization.k8s.io
